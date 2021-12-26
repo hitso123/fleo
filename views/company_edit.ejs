@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+	<div class="container">
+		<h1>Edit company</h1>
+		<form  action="/company/<%= rest.id %>?_method=PUT" method="POST">
+		  <div class="mb-3 form-group">
+			<label for="title" class="form-label">Title</label>
+			<input type="text" class="form-control" name="title" value="<%=rest.title %>" autofocus>
+		  </div>
+			<div class="mb-3 form-group">
+			<label for="total" class="form-label">Total sales</label>
+			<input type="number" class="form-control" name="total" value="<%=rest.total %>">
+		  </div>
+			<div class="mb-3 form-group">
+			<label for="target" class="form-label">Target sales</label>
+			<input type="number" class="form-control" name="target" value="<%=rest.target %>">
+		  </div>
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	
+</div>
+<%- include("partials/footer") %>
+	
